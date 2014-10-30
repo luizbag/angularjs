@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="store">
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 </head>
-<body>
-  <script type="text/javascript" src="angular.min.js" />
+<body ng-controller="StoreController as store">
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <div>
+    <h1> {{store.product.name}} </h1>
+    <h2> ${{store.product.price}} </h2>
+    <p> {{store.product.description}} </p>
+    <button ng-show="store.product.canPurchase"> Add to cart </button>
+  </div>
 </body>
 </html>
